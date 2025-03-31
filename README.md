@@ -12,7 +12,7 @@ A proposta era transformar uma tela simples em um aplicativo funcional com uma �
 
 ## 📦 Tecnologias utilizadas
 
-- **Vite + React + TypeScript** (estrutura moderna e leve)
+- **Vite + React + TypeScript** 
 - **React Bootstrap** (responsividade com grid de forma rápida)
 - **CSS Modules** (isolamento de estilos por componente)
 - **Vitest + Testing Library** (testes unitários)
