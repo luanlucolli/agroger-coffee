@@ -1,54 +1,121 @@
-# React + TypeScript + Vite
+# Agroger Coffee
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Agroger Coffee é uma aplicação criada como solução para o **Desafio Agroger 2025**. O objetivo do desafio era desenvolver um projeto front-end usando **Vite + React**, compondo uma interface limpa, responsiva e funcional, com atenção a **componentização, boas práticas de código, chamadas HTTP e testes unitários**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✳️ Sobre o desafio
 
-## Expanding the ESLint configuration
+A proposta era transformar uma tela simples em um aplicativo funcional com uma única ação: um botão que dispara uma requisição HTTP e renderiza dados em uma lista abaixo. A ideia era aplicar boas práticas de UI/UX, estrutura de código, organização e criatividade.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Tecnologias utilizadas
+
+- **Vite + React + TypeScript** (estrutura moderna e leve)
+- **React Bootstrap** (responsividade com grid de forma rápida)
+- **CSS Modules** (isolamento de estilos por componente)
+- **Vitest + Testing Library** (testes unitários)
+- **React Toastify** (feedback visual ao usuário)
+- **AwesomeAPI** (cotação do dólar em tempo real)
+- **SampleAPIs** (base pública de cafés)
+
+---
+
+## 🔧 Funcionalidades implementadas
+
+- Botão para adicionar cafés aleatórios (sem repetição)
+- Listagem com:
+  - Foto do café
+  - Título
+  - Tipo (quente ou frio)
+  - Preço convertido para reais (R$)
+- Barra de pesquisa por nome
+- Filtros por tipo de café (quente, frio ou todos)
+- Exclusão de cafés com persistência em localStorage
+- Toasts minimalistas para informar ações (erro, sucesso, info)
+- Skeleton loaders enquanto a imagem carrega
+- Placeholder com ícone e mensagem quando a lista está vazia
+- Cotação do dólar obtida via HTTP ao iniciar a aplicação
+- Testes unitários para os principais componentes
+
+---
+
+## 📁 Estrutura organizada
+
+Todo o projeto foi dividido cuidadosamente:
+
+```
+src/
+├── components/
+│   ├── CoffeeCard/
+│   ├── FilterBar/
+│   ├── SearchBar/
+│   ├── Placeholder/
+│   └── Toast/
+├── pages/
+│   └── HomePage.tsx
+├── services/
+│   ├── api.ts         # Requisições para cafés
+│   └── currency.ts    # Requisição para cotação
+├── types/
+│   └── Coffee.ts
+├── tests/
+│   ├── CoffeeCard.test.tsx
+│   ├── FilterBar.test.tsx
+│   └── SearchBar.test.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔬 Testes
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Foram implementados testes com **Vitest** e **Testing Library**. Testamos:
+
+- Entrada e callback do `SearchBar`
+- Troca de filtros no `FilterBar`
+- Renderização e exclusão no `CoffeeCard`
+
+```bash
+npm run test
 ```
+
+---
+
+## 🧪 Testes manuais validados
+
+- [x] Adicionar cafés sem repetir
+- [x] Exclusão persistente no localStorage
+- [x] Toasts informativos
+- [x] Filtros funcionais
+- [x] Busca por nome
+- [x] Requisições à API de cafés
+- [x] Requisição à cotação do dólar
+- [x] Mensagem placeholder quando lista estiver vazia
+
+---
+
+## 🧠 Decisões de design e estrutura
+
+- **Nome e tema**: optamos por cafés, em sintonia com o exemplo visual do PDF.
+- **Cotação real**: convertemos o preço da API (em dólar) para reais, trazendo realismo.
+- **Estilo visual**: respeitamos o layout proposto, mas evoluímos com responsividade, contraste e feedback ao usuário.
+- **Componentização total**: cada parte da UI tem seu próprio módulo e estilo isolado.
+
+---
+
+## 🚀 Como rodar
+
+```bash
+git clone https://github.com/luanlucolli/agroger-coffee
+cd agroger-coffee
+npm install
+npm run dev
+```
+
+---
+
+## ✅ Conclusão
+
+Todo o desafio foi seguido à risca e cada parte foi pensada com foco em **organização, boas práticas e clareza de código**. O resultado é uma aplicação leve, responsiva, funcional e que simula muito bem um ambiente de produção.
+
