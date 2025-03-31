@@ -98,7 +98,7 @@ npm run test
 ## 🧠 Decisões de design e estrutura
 
 - **Nome e tema**: optei por cafés, em sintonia com o exemplo visual do PDF.
-- **Cotação real**: convertemos o preço da API (em dólar) para reais, trazendo realismo.
+- **Cotação real**: converti o preço da API (em dólar) para reais, trazendo realismo.
 - **Estilo visual**: respeitei o layout proposto, mas evoluímos com responsividade, contraste e feedback ao usuário.
 - **Componentização total**: cada parte da UI tem seu próprio módulo e estilo isolado.
 
