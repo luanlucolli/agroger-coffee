@@ -70,7 +70,7 @@ src/
 
 ## 🔬 Testes
 
-Foram implementados testes com **Vitest** e **Testing Library**. Testamos:
+Foram implementados testes com **Vitest** e **Testing Library**. Testei:
 
 - Entrada e callback do `SearchBar`
 - Troca de filtros no `FilterBar`
@@ -97,9 +97,9 @@ npm run test
 
 ## 🧠 Decisões de design e estrutura
 
-- **Nome e tema**: optamos por cafés, em sintonia com o exemplo visual do PDF.
+- **Nome e tema**: optei por cafés, em sintonia com o exemplo visual do PDF.
 - **Cotação real**: convertemos o preço da API (em dólar) para reais, trazendo realismo.
-- **Estilo visual**: respeitamos o layout proposto, mas evoluímos com responsividade, contraste e feedback ao usuário.
+- **Estilo visual**: respeitei o layout proposto, mas evoluímos com responsividade, contraste e feedback ao usuário.
 - **Componentização total**: cada parte da UI tem seu próprio módulo e estilo isolado.
 
 ---
