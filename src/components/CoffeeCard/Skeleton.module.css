@@ -1,0 +1,39 @@
+/* Skeleton.module.css */
+
+.skeletonWrapper {
+  position: relative;
+  display: inline-block;
+
+  overflow: hidden;
+  background-color: #e0e0e0;
+}
+
+.skeletonShimmer {
+  position: absolute;
+  top: 0;
+  left: -150px;
+  
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0));
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(300px);
+   
+  }
+}
+
+.roundedSkeleton {
+  border-radius: 50%;
+  
+}

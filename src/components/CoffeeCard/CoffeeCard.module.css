@@ -1,0 +1,85 @@
+.cardContainer {
+  border: 0.1rem solid #cfcfcf;
+  border-radius: 0.8rem;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.imageContainer {
+  width: 6rem;
+
+  height: 6rem;
+  margin-right: 1rem;
+  position: relative;
+}
+
+.coffeeImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+.contentArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coffeeTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.coffeeType {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Cores do tipo */
+.frio {
+  color: #007bff;
+}
+
+.quente {
+  color: #b91c1c;
+}
+
+/* Container do preço e botão de excluir */
+.priceAndButton {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: 6rem;
+
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  align-self: flex-end;
+}
+
+.deleteButton:hover {
+  color: #b91c1c;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: auto;
+  color: #333;
+}

@@ -1,0 +1,25 @@
+.newCoffeeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background-color: #6c3d21;
+  border: none;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  transition: filter 0.2s;
+  font-size: 1.5rem;
+  height: 3.2rem; 
+}
+
+.newCoffeeBtn:hover {
+  filter: brightness(0.9);
+}
+
+.coffeeIcon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}

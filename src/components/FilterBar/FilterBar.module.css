@@ -1,0 +1,25 @@
+.filterBar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  background-color: #a1a1aa;
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.filterButton:hover {
+  background-color: #6c3d21;
+}
+
+.filterButtonActive {
+  background-color: #6c3d21;
+}
